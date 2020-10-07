@@ -1,36 +1,40 @@
 <!DOCTYPE html>
     <html>
+        <head>
+            <link rel="stylesheet" href="styles.css">
+        </head>
         <body>
             <main>
-                <h1>Tip Calc</h1>
-                <div id="display">0.00</div>
-                <div id="total">0.00</div>
-                <input id="bill" value="10.00" type="number">
-                <input id="tip" value="15" type="number">
-                <input id="people" value="1" type="number">
+                <h1 class="title">Bulk Food Price Calculator</h1>
+                <p class="sub-text">Welcome, this calculator calculates the price of food items per 100 grams. This helps you to make decisions
+                    on which products are the best deal! Try it out with boxes of pasta or bags of chips :)
+                </p>
+                <h4> Price per 100g
+                </h4>
+
+
+ 
+                <input id="price" placeholder="Type $ Price Here" min="0" type="number"> 
+
+
+                <input id="weight" placeholder="Type Weight Here" min="0" type="number">
+
+                <label for="weight-type">Weight Type</label>
+                <select id="weight-type" name="weight-type">
+                  <option value="kg">kgs</option>
+                  <option value="grams">grams</option>
+                  <option value="ounces">ounces</option>
+                  <option value="pounds">pounds</option>
+                </select>
+                <button id="calc-button">Calculate</button>
+                <h2 id="total"></h2>
+
+
             </main>
-            <script>
-                const display = document.querySelector('#display')
-                const billInput = document.querySelector('#bill')
-                const tipInput = document.querySelector('#tip')
-                // const peopleInput = document.querySelector('#people')
-
-                function calculateTip() {
-                    const billValue = billInput.value
-                    const tipValue = tipInput.value
-                    // const peopleValue = peopleInput.value
-
-                    const tipAmount = billValue * tipValue / 100 //divided by peopleValue
-                    display.innerHTML = tipAmount.toFixed(2)
-
-                    //const totalAmount = billValue + tipValue / peopleValue
-                }
-                calculateTip()
-                billInput.addEventListener('input', calculateTip)
-                tipInput.addEventListener('input', calculateTip)
-            </script>
+            <script src="script.js" type="module"></script>
         </body>
     </html>
+
 
 
 
@@ -45,3 +49,46 @@ Tip - element: <input>
 Number of people - element: <input>
 Display tip - element: could be <h1-6>, <p>, <span>, <div>, or <output> you decide!
 Display total - element: <h1-6>, <p>, <span>, <div>, or <output> you decide! -->
+
+
+
+
+<!-- The inputs should have type="number".
+
+All of the tags that need to be accessed by your JavaScript code should have an id. Remember all id values should be unique!
+
+When writing the id names you’ll be repeating these names in your JS code so it would be a good idea to have a naming convention. Discuss your naming covention with another student.
+
+Kabob case is a good choice for id names: kabob-case. All characters are lowercase and hyphen (-) is used at word breaks.
+
+input-bill
+input-tip
+input-people
+display-tip
+display-total -->
+
+
+
+<!-- Define variables for each of the elements. You’ll be creating references to DOM elements and storing them in variables in this step. You should have a naming convention.
+
+Get the reference to the DOM element using document.querySelecotr('#id-name')
+
+Use a naming convention for these variables, as you’ll need to keep track of them. Explain your naming convention to another student.
+
+Use camelCase for these variable names. In camelcase names begin with a lower case letter and use upper case letters at word bbreaks.
+
+const billInput = document.querySelector('#bill')
+
+
+billInput
+tipInput
+peopleInput
+displayTip
+displayTotal -->
+
+
+<!-- Add listeners to each of the input fields. These listeners should listen for the input event. A input event occurs when data input is detected at an input element. 
+As a user enters text or numbers, as each new character is entered, the handler for this event is executed. -->
+
+
+
