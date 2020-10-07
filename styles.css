@@ -1,3 +1,37 @@
-/* font-family, font-size, color, background-color */
-/* margin, border, padding */
-/* flex-direction, justify-content, align-items */
+body {
+    display: flex;
+    height: 100%;
+    background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1));
+    padding: 45px;
+}
+
+#main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: black;
+}
+
+h1.title {
+    font-family: Courier;
+    font-weight: lighter;
+}
+
+p.sub-text {
+    font-family: georgia;
+    font-weight: lighter;
+    font-size: 16px;
+}
+
+#subtitle {
+    font-family: georgia;
+    font-weight: lighter;
+    font-size: 20px;
+}
+
+#calculator {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}

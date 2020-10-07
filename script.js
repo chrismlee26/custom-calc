@@ -22,8 +22,6 @@ function calculateWeight() {
     if (selector.value === "pounds") {
         totalPrice.innerHTML = (priceValue / weightValue * 0.2205).toFixed(2)
     }
-
-
 }
 
 document.querySelector('#calc-button').addEventListener('click', calculateWeight)
